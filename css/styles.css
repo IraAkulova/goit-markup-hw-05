@@ -63,7 +63,9 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                     padding: 32px 0px;
 
                     color: var(--title-text-color);
-                    text-decoration: none;}
+                    text-decoration: none;
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
     .current::after{content: "";
                     position: absolute;
                     display: inline-block;
@@ -87,7 +89,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 padding: 32px 0px;
         
                 color: var(--primary-text-color);
-                text-decoration: none;}
+                text-decoration: none;
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)}
     .contact > a:hover, .contact > a:focus{color: var(--accent-background-color);}
     .icon-header{fill: currentColor;
                 margin-right: 10px;}
@@ -140,7 +143,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                 align-items: center;
                 text-align: center;
                 letter-spacing: 0.06em;
-                cursor: pointer;}
+                cursor: pointer;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)}
     .button-primary:hover, .button-primary:focus{background-color: #188ce8;}
 
     /* section */
@@ -244,7 +248,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
             height: 44px;
             padding: 12px;
             border-radius: 50%;
-        color:var(--social-color);}
+            color:var(--social-color);
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)}
     .social-cards>.social-card:not(:last-child){margin-right: 10px;}
     .social-card>a:hover,.social-card>a:focus {background-color: var(--accent-background-color);
         color: var(--primary-background-color);
@@ -257,7 +262,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
             width: 20px;
             height: 20px;
             background-position: center;
-            background-size: contain;}
+            background-size: contain;
+            transition:fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     .icon-card:hover, .icon-card:focus{fill: var(--primary-background-color);}
 
 
@@ -272,7 +278,8 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
              padding: 16px 32px;
              color: var(--social-color);
                 border: solid 1px var(--social-color);
-                border-radius: 4px;}
+                border-radius: 4px;
+                transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1)}
     .icon-client{content: "";
                 fill: currentColor;
                 width: 106px;
@@ -303,15 +310,18 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 1.71;
-                        letter-spacing: 0.03em;}
-    .footer-e-mail{margin-bottom: 9px;}
+                        letter-spacing: 0.03em;
+                        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+    .footer-e-mail{margin-bottom: 9px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     .footer-e-mail > a, .footer-phone-number > a{color: rgba(255, 255, 255, 0.6);
                                         text-decoration: none;
                                         font-style: normal;
                                         font-weight: 400;
                                         font-size: 14px;
                                         line-height: 1.71;
-                                        letter-spacing: 0.03em;}
+                                        letter-spacing: 0.03em;
+                                        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     .footer-address > a:hover, .footer-address > a:focus{color: var(--accent-background-color);}
     .footer-e-mail > a:hover, .footer-e-mail > a:focus{color: var(--accent-background-color);}    
     .footer-phone-number > a:hover, .footer-phone-number > a:focus{color: var(--accent-background-color);}
@@ -428,13 +438,37 @@ h1,h2,h3,h4,h5,h6,p,ul{margin: 0;
                     font-size: 16px;
                     line-height: 1.88;
                     letter-spacing: 0.03em;}
+    .overlay-description{position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translatey(100%);
+                    width: 370px;
+                    height: 294px;
+                    padding: 63px 24px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1.56;
+                    letter-spacing: 0.03em;
+                    color: var(--primary-background-color);
+                    background-color: rgba(33, 150, 243, 0.9);
+                    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+    .overlay{
+        
+            position: relative;
+            overflow: hidden;}
+    .overlay > img{display: block;}
+    .project-item:hover .overlay-description, 
+    .project-item:focus .overlay-description{transform: translateY(0);}
+
+
     .project-card{padding: 20px 24px;}
     .project-item > a{text-decoration: none;
                     display: block;}
-    .project-item{
+    .project-item{position: relative;
         border: solid 1px #EEEEEE;}
     .project-item:not(:nth-child(n+7)){margin-bottom: 30px;}
     .project-item>a:hover, .project-item>a:focus{
+        
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
     
 
